@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import CounterContext from "./context/CounterContext";
-
+import "./main.css";
 const Main = () => {
   const [score, setScore] = useContext(CounterContext);
   const plusScore = () => {
@@ -10,10 +10,14 @@ const Main = () => {
     setScore(score - 10);
   };
   return (
-    <div>
-      <p>Your current score {score} </p>
-      <button onClick={plusScore}>+</button>
-      <button onClick={minusScore}>-</button>
+    <div className="container">
+      <p className="score">Your current score {score} </p>
+      <button className="btn" onClick={plusScore}>
+        <span>Score +</span>
+      </button>
+      <button className="btn" onClick={minusScore}>
+        <span>Score -</span>
+      </button>
     </div>
   );
 };

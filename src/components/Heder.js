@@ -1,9 +1,10 @@
 import React from "react";
+import "./header.css";
 
 const Heder = () => {
   return (
-    <div>
-      <h1> Score Board "Counter" </h1>
+    <div className="header">
+      <h1 className="head"> Score Board "Counter" </h1>
     </div>
   );
 };
